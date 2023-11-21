@@ -73,16 +73,32 @@ export default function Setprofile() {
         const { name, value } = event.target;
         setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
       };
+      const handleChangetext = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        const { name, value } = event.target;
+        setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+      };
 
       const handleChange1 = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
         setFormData1((prevFormData1) => ({ ...prevFormData1, [name]: value }));
       };
 
+      const handleChangetext1 = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        const { name, value } = event.target;
+        setFormData1((prevFormData1) => ({ ...prevFormData1, [name]: value }));
+      };
+
+
       const handleChange2 = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
         setFormData2((prevFormData2) => ({ ...prevFormData2, [name]: value }));
       };
+
+      const handleChangetext2 = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        const { name, value } = event.target;
+        setFormData2((prevFormData2) => ({ ...prevFormData2, [name]: value }));
+      };
+
 
       const [isOpen, setIsOpen] = useState(false);
 
@@ -316,11 +332,11 @@ export default function Setprofile() {
           <span className="inline-block text-white px-3 pb-5"><b>Make your own team</b></span>
            <form  onSubmit={handleSubmit1}>
   <div className="relative z-0 w-full mb-6 group">
-      <input type="text" name="tname" value={formData1.tname} onChange={handleChange1} id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required/>
+      <input type="text" name="tname" value={formData1.tname} onChange={handleChange} id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required/>
       <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Team Name</label>
   </div>
   <div className="relative z-0 w-full mb-6 group">
-      <textarea type="text" name="tdesc" value={formData1.tdesc} onChange={handleChange1} id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required/>
+      <textarea  name="tdesc" value={formData1.tdesc} onChange={handleChangetext1} id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required/>
       <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Team Description</label>
   </div>
   <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Make your team</button>
@@ -361,11 +377,11 @@ export default function Setprofile() {
       <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Linkedin Profile</label>
   </div>
   <div className="relative z-0 w-full mb-6 group">
-      <textarea type="text" name="s1" value={formData.s1} onChange={handleChange} id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required/>
+      <textarea name="s1" value={formData.s1} onChange={handleChangetext} id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required/>
       <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Why you want to join this hackathon</label>
   </div>
   <div className="relative z-0 w-full mb-6 group">
-      <textarea type="text" name="s2" value={formData.s2} onChange={handleChange} id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required/>
+      <textarea name="s2" value={formData.s2} onChange={handleChangetext} id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required/>
       <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Briefly describe about yourself</label>
   </div>
   <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit for review</button>
